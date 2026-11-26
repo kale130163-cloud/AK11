@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>RAN: New Generation — Web Prototype</title>
+<link rel="stylesheet" href="./style.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js"}}</script>
+</head>
+<body>
+<div id="game"></div>
+<div class="topbar">
+  <div class="profile"><div class="avatar">⚔</div><div><b id="playerName">นักผจญภัย</b><small id="classLabel">นักรบ · ชาย</small><div class="bars"><span id="hpBar"></span></div><small id="hpText">HP 100 / 100</small><div class="bars mana"><span id="mpBar"></span></div><small id="mpText">MP 60 / 60</small></div></div>
+  <div class="level">LV <b id="level">1</b><small> EXP <span id="exp">0</span>/<span id="need">100</span></small></div>
+</div>
+<div class="right-ui"><div class="mapbox"><b id="zoneName">เมืองอนาคต</b><small>แผนที่ทดลอง · เล่นคนเดียว</small><div class="minimap">✦<span>เมือง</span></div></div><div class="quest"><b>ภารกิจเริ่มต้น</b><p>กำจัดปีศาจฝึกหัด <strong id="kills">0</strong>/3</p><small>รางวัล: EXP +50 · เหรียญ +30</small></div></div>
+<div class="left-ui"><button data-panel="classes">อาชีพ</button><button data-panel="shop">ร้านค้า NPC</button><button data-panel="bag">กระเป๋า</button><button data-panel="maps">แผนที่</button></div>
+<div class="bottom-ui"><div id="message">ยินดีต้อนรับสู่ RAN: New Generation — คลิกพื้นเพื่อเดิน หรือใช้ WASD</div><div class="skills"><button data-skill="0">⚔<small>ฟัน</small></button><button data-skill="1">🔥<small>เพลิง</small></button><button data-skill="2">✦<small>พุ่ง</small></button><button data-skill="3">💠<small>ฟื้นฟู</small></button><button id="attack">โจมตี</button></div></div>
+<div class="mobile-pad"><button id="up">▲</button><div><button id="left">◀</button><button id="down">▼</button><button id="right">▶</button></div></div>
+<div id="modal" class="modal hidden"><div class="dialog"><button class="close" id="close">✕</button><div id="modalContent"></div></div></div>
+<div class="hint">WASD เดิน · คลิกพื้นเพื่อเคลื่อนที่ · คลิกมอนสเตอร์เพื่อเลือก · Space โจมตี</div>
+<script type="module" src="./game.js"></script>
+</body></html>
